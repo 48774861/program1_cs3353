@@ -88,34 +88,33 @@ void ShellSort(vector<Stuff>& s, int code) {
 int main()
 {
    srand(time(0));		// keep this line if you want to generate different random objects for each run
-   int vector_size = 100;
-   int code = 1;
-   for(int i = 0; i < 100; i++) {
-      vector<Stuff> vec;
-      size_t vec_size = vector_size;
+   int vector_size = 3000;
+   int code = 4;
+   
+   vector<Stuff> vec;
+   size_t vec_size = vector_size;
 
-      for (size_t i = 0; i < vec_size; i++)
-      {
-         Stuff s;
-         vec.push_back(s);
-      }
-
-      for (size_t i = 0; i < vec_size; i++)
-      {
-         cout << vec[i] << endl;
-      }
-
-      cout << "-----\n";
-
-      // uncomment this line when the shell sort is implemented
-      ShellSort(vec, code);
-
-      for (size_t i = 0; i < vec_size; i++)
-      {
-         cout << vec[i] << endl;
-      }
-
-      cout << (vec[0] < vec[1]) << endl;
-      cout << "compareCount : " << Stuff::compareCount << endl;
+   for (size_t i = 0; i < vec_size; i++)
+   {
+      Stuff s;
+      vec.push_back(s);
    }
+
+   for (size_t i = 0; i < vec_size; i++)
+   {
+      cout << vec[i] << endl;
+   }
+
+   cout << "-----\n";
+
+   // uncomment this line when the shell sort is implemented
+   ShellSort(vec, code);
+
+   for (size_t i = 0; i < vec_size; i++)
+   {
+      cout << vec[i] << endl;
+   }
+
+   cout << (vec[0] < vec[1]) << endl;
+   cout << "compareCount : " << Stuff::compareCount << endl;
 }

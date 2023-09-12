@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/marcpham/CLionProjects/CS3353/program1_cs3353/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wall -Wextra -pedantic -o CMakeFiles/main.dir/shellTest.cpp.o -c /Users/marcpham/CLionProjects/CS3353/program1_cs3353/shellTest.cpp",
+  "file": "/Users/marcpham/CLionProjects/CS3353/program1_cs3353/shellTest.cpp",
+  "output": "CMakeFiles/main.dir/shellTest.cpp.o"
+},
+{
+  "directory": "/Users/marcpham/CLionProjects/CS3353/program1_cs3353/build",
+  "command": "/usr/bin/clang++   -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -Wall -Wextra -pedantic -o CMakeFiles/main.dir/stuff.cpp.o -c /Users/marcpham/CLionProjects/CS3353/program1_cs3353/stuff.cpp",
+  "file": "/Users/marcpham/CLionProjects/CS3353/program1_cs3353/stuff.cpp",
+  "output": "CMakeFiles/main.dir/stuff.cpp.o"
+}
+]

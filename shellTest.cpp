@@ -73,7 +73,7 @@ void ShellSort(vector<Stuff>& s, int code) {
       hlist.pop();
       for(int j = 1; j < s.size(); j++) {
          int i = j;
-         while((i >= h) && (s.at(i) < s.at(i-h))) {
+         while((i >= h) && (s.at(i-h) < s.at(i))) {
             Stuff temp(s.at(i));
             s.at(i) = s.at(i-h);
             s.at(i-h) = temp;
@@ -88,47 +88,34 @@ void ShellSort(vector<Stuff>& s, int code) {
 int main()
 {
    srand(time(0));		// keep this line if you want to generate different random objects for each run
-   int vector_sizes[] = {3000, 5000, 7000, 9000, 11000, 13000, 15000};
-   for(size_t vec_i = 0; vec_i < 7; vec_i++) {
+   int vector_size = 100;
+   int code = 1;
+   for(int i = 0; i < 100; i++) {
+      vector<Stuff> vec;
+      size_t vec_size = vector_size;
 
-      std::cout << "\n\n\nVector Size: " << vector_sizes[vec_i] << "\n\n\n";
-      for(int code = 0; code < 5; code++) {
-         vector<int> compareCounts(100);
-         for(int i = 0; i < 100; i++) {
-            vector<Stuff> vec;
-            size_t vec_size = vector_sizes[vec_i];
-
-            for (size_t i = 0; i < vec_size; i++)
-            {
-               Stuff s;
-               vec.push_back(s);
-            }
-
-            // for (size_t i = 0; i < vec_size; i++)
-            // {
-            //    cout << vec[i] << endl;
-            // }
-
-            // cout << "-----\n";
-
-            // uncomment this line when the shell sort is implemented
-            ShellSort(vec, code);
-
-            // for (size_t i = 0; i < vec_size; i++)
-            // {
-            //    cout << vec[i] << endl;
-            // }
-
-            //cout << (vec[0] < vec[1]) << endl;
-            //cout << "compareCount : " << Stuff::compareCount << endl;
-            compareCounts.at(i) = Stuff::compareCount;
-            Stuff::compareCount = 0;
-         }
-         std::cout << "={";
-         for(int i = 0; i < 99; i++) {
-            std::cout << compareCounts.at(i) << ";";
-         }
-         std::cout << compareCounts.at(99) << "}\n\n";
+      for (size_t i = 0; i < vec_size; i++)
+      {
+         Stuff s;
+         vec.push_back(s);
       }
+
+      for (size_t i = 0; i < vec_size; i++)
+      {
+         cout << vec[i] << endl;
+      }
+
+      cout << "-----\n";
+
+      // uncomment this line when the shell sort is implemented
+      ShellSort(vec, code);
+
+      for (size_t i = 0; i < vec_size; i++)
+      {
+         cout << vec[i] << endl;
+      }
+
+      cout << (vec[0] < vec[1]) << endl;
+      cout << "compareCount : " << Stuff::compareCount << endl;
    }
 }
